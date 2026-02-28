@@ -31,25 +31,33 @@
             color: white;
             padding: 3rem 2rem;
             border-radius: 1rem;
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
         }
         header h1 { margin: 0 0 0.5rem 0; font-size: 2.5rem; }
         header p { margin: 0; font-size: 1.2rem; opacity: 0.9; }
         
+        .trend-block {
+            margin-bottom: 5rem;
+            border-top: 2px dashed #E5E7EB;
+            padding-top: 3rem;
+        }
+        .trend-block:first-of-type { border-top: none; padding-top: 0; }
+        
         .analysis-section {
             background: var(--card-bg);
             padding: 2rem;
             border-radius: 1rem;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
             border-left: 5px solid var(--secondary);
         }
-        .analysis-section h2 { color: var(--primary); margin-top: 0; }
+        .analysis-section h2 { color: var(--primary); margin-top: 0; font-size: 1.8rem; }
+        .analysis-section p { font-size: 1.05rem; color: #4B5563; }
         
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
             gap: 2rem;
         }
         .post-card {
@@ -60,13 +68,15 @@
             transition: transform 0.2s;
             display: flex;
             flex-direction: column;
+            border: 1px solid #E5E7EB;
         }
-        .post-card:hover { transform: translateY(-5px); }
+        .post-card:hover { transform: translateY(-5px); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); }
         .post-img {
             width: 100%;
-            height: 300px;
+            height: 350px;
             object-fit: cover;
             background-color: #E5E7EB;
+            border-bottom: 1px solid #E5E7EB;
         }
         .post-content { padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column;}
         .meta {
@@ -85,7 +95,6 @@
             -webkit-line-clamp: 3;
             -webkit-box-orient: vertical;
             overflow: hidden;
-            white-space: pre-wrap;
         }
         .insight {
             background: #EFF6FF;
@@ -114,679 +123,131 @@
 
 <div class="container">
     <header>
-        <h1>⚡ Radar Social Media</h1>
-        <p>Intelligence créative & signaux faibles — Généré par IA</p>
+        <h1>⚡ Curated Social Trends</h1>
+        <p>Analyse stratégique & curation des meilleurs signaux faibles par l'Intelligence Analyst</p>
     </header>
 
-    <div class="analysis-section">
-        <h2>🔥 Ce qui est cool en ce moment (Executive Summary)</h2>
-        <p>Après l'analyse des signaux faibles et des patterns de viralité de cette cohorte, trois dynamiques macro se dessinent très clairement sur l'écosystème Instagram actuel. Oubliez la course effrénée au format "tout-Reel" dictée par 2024 ; nous observons une correction majeure de l'algorithme qui favorise à nouveau la densité de l'information via le <strong>retour en grâce fulgurant du format Carrousel</strong>. Les créateurs l'affirment ouvertement : c'est le format roi pour la croissance et le temps de rétention.</p>
-        
-        <p>La seconde grande tendance est la <strong>friction zéro vers l'acquisition</strong> ("Lead Generation" via DM). L'engagement n'est plus passif : il est devenu transactionnel. Les créateurs B2B systématisent des "Call to Action" rudimentaires mais dévastateurs (ex: "Commentez TRENDING pour recevoir le lien"). Cette mécanique de ManyChat/Automation qualifie des leads instantanément tout en hackant l'algorithme via des pics de commentaires artificiels.</p>
-        
-        <p>Enfin, le <strong>"Curation-as-a-Service"</strong> s'impose comme positionnement d'autorité absolu. Face à l'infobésité, les créateurs qui performent le mieux sont ceux qui mâchent le travail de leur audience en packagant des "Cheat Sheets", en donnant les scripts exacts ("fill-in-the-blank") ou en compilant les tendances audio et visuelles (trend reporting). Vous n'êtes plus un créateur de contenu, vous êtes un filtre de valeur.</p>
-        
-        <h3>🚀 Opportunités Activables ("Playbook") :</h3>
-        <ul>
-            <li><strong>Pivoter vers le Macro-Content visuel :</strong> Réinvestissez le temps gagné sur la vidéo dans la production de carrousels denses, ultra-éducatifs ou curatifs (ex: "Top 5 des outils") pour maximiser le taux de sauvegarde (Save-baiting).</li>
-            <li><strong>Automatisation de l'entonnoir (DM funnels) :</strong> Intégrez systématiquement un Lead Magnet (templates, cheat sheets) accessible uniquement via un mot-clé commenté sous le post.</li>
-            <li><strong>Newsjacking et Meta-tendances :</strong> Surfez sur les angoisses ou les besoins de l'audience B2B en proposant des "Updates algorithmiques" ou des "Séries récurrentes" (ex: Les tendances de la semaine). La régularité crée le rendez-vous.</li>
-        </ul>
+    <div class="trend-block">
+        <div class="analysis-section">
+            <h2>🔥 L'Automatisation Conversationnelle (Le "Comment-to-DM")</h2>
+            <p>Nous observons une bascule stratégique massive vers l'acquisition "In-App". Le traditionnel "Link in bio" perd en efficacité algorithmique et cède sa place à l'injonction au commentaire ("Commentez un mot précis"). Cette mécanique, souvent propulsée par des outils d'automatisation comme ManyChat, a un double effet redoutable : elle dope artificiellement la viralité du post grâce à l'afflux de commentaires, tout en qualifiant instantanément le prospect en l'insérant dans un tunnel de conversion directement via les Messages Directs (DM). L'opportunité est claire : transformer chaque publication en véritable landing page interactive.</p>
+        </div>
+
+        <div class="grid">
+            <article class="post-card">
+                <img src="https://wsrv.nl/?url=https://scontent-bos5-1.cdninstagram.com/v/t51.82787-15/641752513_17915390712296452_1983630232227961841_n.jpg?stp=dst-jpg_e15_fr_p1080x1080_tt6&_nc_ht=scontent-bos5-1.cdninstagram.com&_nc_cat=1&_nc_oc=Q6cZ2QHh3FSo53Byu-DTjTx4YaL1uap_uFsUPOJ_cYPCeeTvRXGLoEQg_q0865PGzA5r00E&_nc_ohc=S9cIHH-WjM0Q7kNvwHW3-XH&_nc_gid=h8I6iD9E8JImts7UPHmThw&edm=APs17CUBAAAA&ccb=7-5&oh=00_AfuPjRRbb3PzIVYS4CUcxDAavwgcGduufT448KBLeB8NQQ&oe=69A7C5DD&_nc_sid=10d13b" alt="Post image" class="post-img">
+                <div class="post-content">
+                    <div class="meta">
+                        <span>@socialsyncflow</span>
+                        <span>❤️ 2952</span>
+                    </div>
+                    <p class="caption">Comment “DAILY” and get the exact strategies behind 26M views, 30K followers & thousands of leads in 90 days - delivered in 90-second lessons for 30 days....</p>
+                    <div class="insight">
+                        <strong>💡 Comment ce post l'illustre :</strong><br>
+                        Ce post est un cas d'école de lead generation en organique. En promettant une valeur perçue très élevée (stratégies exactes pour 26M de vues) en échange d'un simple micro-engagement ("DAILY"), il crée une boucle virale. Les 208 commentaires générés nourrissent l'algorithme tout en déclenchant l'automatisation.
+                    </div>
+                    <a href="https://www.instagram.com/p/DVG5GmUDJLG/" target="_blank" class="btn">Voir le post Instagram</a>
+                </div>
+            </article>
+            
+            <article class="post-card">
+                <img src="https://wsrv.nl/?url=https://scontent-lga3-3.cdninstagram.com/v/t51.82787-15/641709893_17915660640296452_7013557799439935781_n.jpg?stp=dst-jpg_e15_fr_p1080x1080_tt6&_nc_ht=scontent-lga3-3.cdninstagram.com&_nc_cat=104&_nc_oc=Q6cZ2QEybY4X28sEgMveIYI_rgNB4cdsxDU5yDHkYb1EQTdu4H4tfedJwuCsDyGnkKAsNsE&_nc_ohc=9hRWrb2pApMQ7kNvwE1CAut&_nc_gid=_jXQXLYwKHnE55Rr-bYlcw&edm=APs17CUBAAAA&ccb=7-5&oh=00_AfuYPDV6hsXMup7k4ZdG5sWmpHSxgGp-9UcjCGfHuutFsA&oe=69A7A76D&_nc_sid=10d13b" alt="Post image" class="post-img">
+                <div class="post-content">
+                    <div class="meta">
+                        <span>@socialsyncflow</span>
+                        <span>❤️ 1017</span>
+                    </div>
+                    <p class="caption">PART 1. OF OUR MARCH CONTENT IDEAS. So here we are with 4 weeks of content ideas for March. If you never wanna worry about content again, COMMENT “YEAR” and we will send you 365 content ideas...</p>
+                    <div class="insight">
+                        <strong>💡 Comment ce post l'illustre :</strong><br>
+                        L'utilisation du mot-clé "YEAR" pour débloquer un outil "Done-For-You" démontre comment les créateurs transforment une friction algorithmique en pipeline commercial direct. C'est l'évolution ultime du lead magnet.
+                    </div>
+                    <a href="https://www.instagram.com/p/DVMAavUDDbS/" target="_blank" class="btn">Voir le post Instagram</a>
+                </div>
+            </article>
+        </div>
     </div>
 
-    <h2 style="color: var(--primary); margin-bottom: 1.5rem;">📱 Radar des Posts Inspirants</h2>
-    <div class="grid">
-        
-        <article class="post-card">
-            <img src="https://scontent-lga3-1.cdninstagram.com/v/t51.82787-15/641044355_18387351301153388_5093094776509294501_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=scontent-lga3-1.cdninstagram.com&_nc_cat=108&_nc_oc=Q6cZ2QHAlhT1p4FVWf4uEcO2j83LYW0_vcJ9Zu2LqC0LSrOkozswS5I3Wy8WZoPKpHT0fwY&_nc_ohc=VqCTKQGjv9gQ7kNvwGphSPa&_nc_gid=D5N02dX3ptE4fR2oCILDeg&edm=APs17CUBAAAA&ccb=7-5&oh=00_AfudIQq5jJIjiancxNGmrp4yMkRodjLqOVMBG8B24-nmWA&oe=69A79DF0&_nc_sid=10d13b" alt="Post image" class="post-img">
-            <div class="post-content">
-                <div class="meta">
-                    <span>@_socialsam_</span>
-                    <span>❤️ 349</span>
+    <div class="trend-block">
+        <div class="analysis-section">
+            <h2>🔥 Le Comeback Stratégique du Carrousel & du Macro-Contenu</h2>
+            <p>Après une overdose de formats courts ultrarapides (fast-content), l'algorithme d'Instagram et les comportements utilisateurs s'alignent vers une recherche de profondeur. Le Carrousel revient en force pour s'imposer comme le format ROIste par excellence. Pourquoi ? Parce qu'il favorise le "Watch-Time" (ou Dwell-Time, le temps passé sur la publication) et démultiplie le taux de "Saves" (enregistrements). Éduquer, lister, expliquer à travers 10 slides devient la méthode la plus fiable pour asseoir son autorité, fidéliser une communauté et contrer l'aspect éphémère et aléatoire des Reels.</p>
+        </div>
+
+        <div class="grid">
+            <article class="post-card">
+                <img src="https://wsrv.nl/?url=https://scontent-mia3-2.cdninstagram.com/v/t51.82787-15/627276698_18391484305195531_3806802255740003432_n.jpg?stp=dst-jpg_e15_fr_p1080x1080_tt6&_nc_ht=scontent-mia3-2.cdninstagram.com&_nc_cat=107&_nc_oc=Q6cZ2QGus-C9ZYIktRbmL-vpz4SvYhctf2Xw5VmTwkGy2I0d-K6bxuAlrQbCd3GA1X6A7e0&_nc_ohc=rVyCf7laOe0Q7kNvwGmWb-a&_nc_gid=VdVCxG4284LkuqdOmwYhuA&edm=APs17CUBAAAA&ccb=7-5&oh=00_AfviybXVt4vlUSiqxyk4yxsVXBkobavrims9n2dNLLeXVQ&oe=69A7A302&_nc_sid=10d13b" alt="Post image" class="post-img">
+                <div class="post-content">
+                    <div class="meta">
+                        <span>@holler.academy</span>
+                        <span>❤️ 589</span>
+                    </div>
+                    <p class="caption">CAROUSEL TRENDS FOR THE WEEK - March 2026 😍 ✨PART ONE✨ I’ve seen some shocking information about carousels that I’m going to share with you this week...</p>
+                    <div class="insight">
+                        <strong>💡 Comment ce post l'illustre :</strong><br>
+                        Le créateur méta-analyse lui-même la tendance en utilisant un carrousel pour expliquer que le carrousel est LE format dominant de début 2026. L'engagement (plus de 270 commentaires) valide empiriquement cette thèse.
+                    </div>
+                    <a href="https://www.instagram.com/p/DVIzt29CncH/" target="_blank" class="btn">Voir le post Instagram</a>
                 </div>
-                <p class="caption">📝 March 2026 Instagram cheat sheet 💥
+            </article>
 
-This cheat sheet has EVERYTHING you need to stay ahead of the game - formats, posting schedules, tools, and a sprinkle of secret sauce. 😏✨
-
-So whether you’re a creator, business owner, or just wanna up your Insta game, I’ve got you covered. 🙌
-
-Send this to a...</p>
-                <div class="insight">
-                    <strong>💡 Pourquoi ça marche :</strong><br>
-                    Utilité maximale. Le concept de "Cheat sheet" mensuelle (antisèche) active mécaniquement le réflexe de sauvegarde ("Save-baiting"). L'audience voit un raccourci cognitif indispensable, ce qui booste le ranking algorithmique du post.
+            <article class="post-card">
+                <img src="https://wsrv.nl/?url=https://scontent-bos5-1.cdninstagram.com/v/t51.82787-15/628718179_18093081218283906_3876254373602823782_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=scontent-bos5-1.cdninstagram.com&_nc_cat=106&_nc_oc=Q6cZ2QG6yuhcEDUgIl5nPUthhT9WhHCAFcnWg9s7GigGESUEhekFh8INdbOiqg7KRilmoFI&_nc_ohc=7ulXXQ2rM7MQ7kNvwFefMQE&_nc_gid=MLcHAMv8084YrUhC_hrvbw&edm=APs17CUBAAAA&ccb=7-5&oh=00_AfsuqVA1ZUt-UI4tlXQnHxq1KjkJMzs3JE5PzxdMWnOCWQ&oe=69A79945&_nc_sid=10d13b" alt="Post image" class="post-img">
+                <div class="post-content">
+                    <div class="meta">
+                        <span>@elasmarketingservices</span>
+                        <span>❤️ 1451</span>
+                    </div>
+                    <p class="caption">Sorry, I lied. There’s more. This is only part 1 of currently trending carousel posts so keep an eye out for part two next week. And if you need any trending carousel templates...</p>
+                    <div class="insight">
+                        <strong>💡 Comment ce post l'illustre :</strong><br>
+                        En documentant visuellement les designs de carrousels qui performent, ce compte prouve que l'esthétique et la charge d'information sont des leviers majeurs, et capitalise sur cette demande naissante pour vendre ses propres templates.
+                    </div>
+                    <a href="https://www.instagram.com/p/DU6YOFAkSTW/" target="_blank" class="btn">Voir le post Instagram</a>
                 </div>
-                <a href="https://www.instagram.com/p/DVL8UBvDmBb/" target="_blank" class="btn">Voir le post Instagram</a>
-            </div>
-        </article>
+            </article>
+        </div>
+    </div>
 
-        <article class="post-card">
-            <img src="https://scontent-lga3-3.cdninstagram.com/v/t51.82787-15/641709893_17915660640296452_7013557799439935781_n.jpg?stp=dst-jpg_e15_fr_p1080x1080_tt6&_nc_ht=scontent-lga3-3.cdninstagram.com&_nc_cat=104&_nc_oc=Q6cZ2QEybY4X28sEgMveIYI_rgNB4cdsxDU5yDHkYb1EQTdu4H4tfedJwuCsDyGnkKAsNsE&_nc_ohc=9hRWrb2pApMQ7kNvwE1CAut&_nc_gid=_jXQXLYwKHnE55Rr-bYlcw&edm=APs17CUBAAAA&ccb=7-5&oh=00_AfuYPDV6hsXMup7k4ZdG5sWmpHSxgGp-9UcjCGfHuutFsA&oe=69A7A76D&_nc_sid=10d13b" alt="Post image" class="post-img">
-            <div class="post-content">
-                <div class="meta">
-                    <span>@socialsyncflow</span>
-                    <span>❤️ 1017</span>
+    <div class="trend-block">
+        <div class="analysis-section">
+            <h2>🔥 Le "Content Spoon-Feeding" ou la Curation Prête-à-Consommer</h2>
+            <p>Face à la fatigue décisionnelle et au "burnout" lié à la création de contenu (la fameuse course aux trends), une nouvelle typologie de créateurs émerge en tant que "Filtres". Ces experts digèrent l'écosystème chaotique d'Instagram pour littéralement "mâcher" le travail de leur audience. Ils ne se contentent plus d'inspirer, ils délivrent du "prêt-à-porter" social : listes des trends actuelles, audios précis, hooks à copier-coller et concepts détaillés. Ce positionnement utilitaire génère une valeur immédiate perçue immense et positionne l'émetteur en ressource vitale plutôt qu'en simple influenceur.</p>
+        </div>
+
+        <div class="grid">
+            <article class="post-card">
+                <img src="https://wsrv.nl/?url=https://scontent-lax3-1.cdninstagram.com/v/t51.82787-15/641356840_17978461274985808_5008701715957087578_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_cat=104&_nc_oc=Q6cZ2QFD8ASw2RUhUL-SDzmeVNt6viznbYZMlnGLUY5Rncc78l60IysXSa7NBtH7u901j_k&_nc_ohc=NXjgZlacE0QQ7kNvwEp8iJJ&_nc_gid=XKGt9ozDqcsGMz_rmyzBrQ&edm=APs17CUBAAAA&ccb=7-5&oh=00_Aft-QldHHB-SbFDqlqugEwy0uVRQKMhv-j8_0_9Daqrw2w&oe=69A79726&_nc_sid=10d13b" alt="Post image" class="post-img">
+                <div class="post-content">
+                    <div class="meta">
+                        <span>@social.unicorns</span>
+                        <span>❤️ 3278</span>
+                    </div>
+                    <p class="caption">MARCH 2026 SOCIAL MEDIA TRENDS - PART 1 🌸 Trend 1: My nervous system @katstickler Trend 2: POV: I fell but I saved my matcha @jessideoliveira @leiafelicilda Trend 3: What’s the plan? ...</p>
+                    <div class="insight">
+                        <strong>💡 Comment ce post l'illustre :</strong><br>
+                        Le listing granulaire (Trend 1, Trend 2...) avec l'identification exacte des créateurs d'origine est l'exemple parfait du Spoon-Feeding. Ce format favorise massivement la sauvegarde et construit une autorité instantanée pour le curateur.
+                    </div>
+                    <a href="https://www.instagram.com/p/DVL9JEdDPhj/" target="_blank" class="btn">Voir le post Instagram</a>
                 </div>
-                <p class="caption">PART 1. OF OUR MARCH CONTENT IDEAS
+            </article>
 
-So here we are with 4 weeks of content ideas for March
-If you never wanna worry about content again, COMMENT
-“YEAR” and we will send you 365 content ideas for a whole year, structured month by month ✨...</p>
-                <div class="insight">
-                    <strong>💡 Pourquoi ça marche :</strong><br>
-                    La mécanique d'activation DM à son paroxysme. En proposant "1 an d'idées" gratuit contre un simple commentaire ("YEAR"), le compte crée une avalanche d'engagement artificiel qui propulse la portée, tout en alimentant sa base de prospects en privé.
+            <article class="post-card">
+                <img src="https://wsrv.nl/?url=https://scontent-hou1-1.cdninstagram.com/v/t51.82787-15/623373052_18091048400283906_417769845711911899_n.jpg?stp=dst-jpg_e15_fr_p1080x1080_tt6&_nc_ht=scontent-hou1-1.cdninstagram.com&_nc_cat=106&_nc_oc=Q6cZ2QF0q40dw83ct1ZsVZP6JnGJSzYmxRHfccOsN10dQfjVguBqi5vNNc8bjkr2u42zzQQ&_nc_ohc=6EoDYGZq0uoQ7kNvwEEdDIY&_nc_gid=jJeFqlCR9TSVle7-Ir19PA&edm=APs17CUBAAAA&ccb=7-5&oh=00_AfvVYfayTcdzh7f3dDqJDYdFpy5r3IGzCdye2ok-Gyt_Nw&oe=69A7ACDF&_nc_sid=10d13b" alt="Post image" class="post-img">
+                <div class="post-content">
+                    <div class="meta">
+                        <span>@elasmarketingservices</span>
+                        <span>❤️ 5234</span>
+                    </div>
+                    <p class="caption">🚨THIS girl dinner is pitch perfect! Here are THE February Social Media Trends happening right now! I bet you didn’t see that fake green screen coming but honestly that’s the way I like it ;)</p>
+                    <div class="insight">
+                        <strong>💡 Comment ce post l'illustre :</strong><br>
+                        Avec plus de 5200 likes, ce post montre l'appétence extrême des audiences pour le contenu de veille pré-packagé. Le hook ("Here are THE Trends") capte l'attention et libère la dopamine de celui qui a peur de manquer le prochain format viral.
+                    </div>
+                    <a href="https://www.instagram.com/p/DUEEyJsj3Du/" target="_blank" class="btn">Voir le post Instagram</a>
                 </div>
-                <a href="https://www.instagram.com/p/DVMAavUDDbS/" target="_blank" class="btn">Voir le post Instagram</a>
-            </div>
-        </article>
-
-        <article class="post-card">
-            <img src="https://instagram.fosu2-1.fna.fbcdn.net/v/t51.71878-15/620411465_749015191599930_3524472863839095013_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=instagram.fosu2-1.fna.fbcdn.net&_nc_cat=106&_nc_oc=Q6cZ2QEbyM0fcMret21xFrdzyBUb7nVF2gmrTqLSGDUH860D_cBo_wRnWGRUD3sYYdoMkebyd4Y_lNl0Zww4E00yc6ZK&_nc_ohc=CpZXfCX4qhAQ7kNvwEnsGho&_nc_gid=61LxUa9tMi1mqHenSxLw9w&edm=APs17CUBAAAA&ccb=7-5&oh=00_AfssYhr8N52dQRtPbiDVW1kUIeX_56nnB4wBEYBYwAnNzQ&oe=69A7AFBE&_nc_sid=10d13b" alt="Post image" class="post-img">
-            <div class="post-content">
-                <div class="meta">
-                    <span>@thekatelynrhoades</span>
-                    <span>❤️ 80</span>
-                </div>
-                <p class="caption">ONE SPOT OPEN > Social media isn’t our side hustle — it’s our full-time job. 💅🏻
-
-We’ve got ONE spot left for a FEBRUARY 2026 start date inside our done-for-you management program!
-
-✨ Imagine handing off your Instagram to a team of experts — so you can get back to running your business, while we ha...</p>
-                <div class="insight">
-                    <strong>💡 Pourquoi ça marche :</strong><br>
-                    Scarcity Marketing tactique (FOMO). Annoncer "une seule place restante" pour un service ultra-premium ("Done-for-you") cible les clients fatigués par la charge mentale sociale, prêts à déléguer rapidement.
-                </div>
-                <a href="https://www.instagram.com/p/DTywS_GDtwT/" target="_blank" class="btn">Voir le post Instagram</a>
-            </div>
-        </article>
-
-        <article class="post-card">
-            <img src="https://scontent-lga3-1.cdninstagram.com/v/t51.82787-15/640498791_18387235036153388_6898423678648960700_n.jpg?stp=dst-jpg_e15_fr_p1080x1080_tt6&_nc_ht=scontent-lga3-1.cdninstagram.com&_nc_cat=108&_nc_oc=Q6cZ2QEmqfNogTIe_wT7euA01bd3X2Jghv02d7tD77karOaXXYVQaHUotrISPcbnn4Z-oCyaDcfhHtCudPDEkZIx2KHC&_nc_ohc=uP3m6EKr1vcQ7kNvwFgTQ1T&_nc_gid=BGyPn1u0f5sZInv2GjoLWw&edm=APs17CUBAAAA&ccb=7-5&oh=00_AfsO7VVYJIn09umZ0Rgly_OmMHAaC_-UH9_51J4AXUjS_A&oe=69A7C43F&_nc_sid=10d13b" alt="Post image" class="post-img">
-            <div class="post-content">
-                <div class="meta">
-                    <span>@_socialsam_</span>
-                    <span>❤️ 258</span>
-                </div>
-                <p class="caption">[🖐🏻 Canva apps you wish you knew sooner] 📱
-
-We all love Canva on its own…but these 5 Canva apps take it to a whole new level 🤩✨
-
-Think:
-
-⚡ faster designs
-🎨 better visuals
-🧠 less overthinking
-
-Which one are you trying first? 😊👇🏻
-
-#canva #canvaapps #contentcreator #contentcreation...</p>
-                <div class="insight">
-                    <strong>💡 Pourquoi ça marche :</strong><br>
-                    Le format "Listicle" tech. Partager des applications tierces/méconnues d'un outil déjà massivement utilisé (Canva) garantit un taux de sauvegarde phénoménal. C'est du "snackable content" à très haute valeur perçue.
-                </div>
-                <a href="https://www.instagram.com/p/DVJTnbCjoXD/" target="_blank" class="btn">Voir le post Instagram</a>
-            </div>
-        </article>
-
-        <article class="post-card">
-            <img src="https://scontent-lga3-3.cdninstagram.com/v/t51.71878-15/638892493_939734648493580_4186470309748213539_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=scontent-lga3-3.cdninstagram.com&_nc_cat=104&_nc_oc=Q6cZ2QHGdZJYzQRjsYR8lxlHhcwFNfrd9K_0a-nn-V-DLTYpdc8jxaIZ5IdMLyA9OpSmP9s&_nc_ohc=BA3Z8lvDkg8Q7kNvwH9I72Q&_nc_gid=ZogzIGFUP2arbreBQhIb7w&edm=APs17CUBAAAA&ccb=7-5&oh=00_Afv5Zgogtw-TG1wotVnRrbWSbyXCHFCmFGJCDjh95M-l3g&oe=69A7A9D4&_nc_sid=10d13b" alt="Post image" class="post-img">
-            <div class="post-content">
-                <div class="meta">
-                    <span>@thekatelynrhoades</span>
-                    <span>❤️ 173</span>
-                </div>
-                <p class="caption">STOP ✋ use this audio and hook for your next reel 👇🏼👇🏼
-
-1. Save this audio 
-2. Send this reel to yourself to come back to
-
-3. Grab a 7-10 sec video clip and use this hook: 
-
-Calm down. I googled your symptoms and it turns out you’re not croaking. You just need ________. 
-
-Make it fun, like this ...</p>
-                <div class="insight">
-                    <strong>💡 Pourquoi ça marche :</strong><br>
-                    Le modèle "Plug & Play". Fournir l'audio exact et le script à trou ("fill-in-the-blank") enlève toute barrière mentale à la création. L'ordre "Save this audio" est suivi aveuglément pour ne pas perdre la trend.
-                </div>
-                <a href="https://www.instagram.com/p/DVM4NJfiSMh/" target="_blank" class="btn">Voir le post Instagram</a>
-            </div>
-        </article>
-
-        <article class="post-card">
-            <img src="https://scontent-det1-1.cdninstagram.com/v/t51.82787-15/639610224_18387565447153388_1944596384286833785_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=scontent-det1-1.cdninstagram.com&_nc_cat=108&_nc_oc=Q6cZ2QFP8XWwUahX4TXcXJN8xgsr0Y2go0XMsOrN9tRxCtEWwKiIt25p2Kf-byK0fjCgWH5dQsNA8cuswrt6zO8mSRGC&_nc_ohc=WWTPflyATu0Q7kNvwEAJDyo&_nc_gid=vxVzl19GJ0y57iIdx7Sa9w&edm=APs17CUBAAAA&ccb=7-5&oh=00_AfuJp6gtkmB9lqaDp35WvET7qH5PNSayW9MiH_BvqijCsg&oe=69A7BCFC&_nc_sid=10d13b" alt="Post image" class="post-img">
-            <div class="post-content">
-                <div class="meta">
-                    <span>@_socialsam_</span>
-                    <span>❤️ 117</span>
-                </div>
-                <p class="caption">🚨[TRENDING This week] 🤩👆
-
-These Instagram trends are blowing up on Instagram this week 🤩🔥 These are great for attracting audience to your profile and sell in a non-salesy way ✨
-
-PS: If want Canva templates for these comment TRENDING for the link 🙌🏻
-
-#instagramtrend #postidea  #reelidea #trend...</p>
-                <div class="insight">
-                    <strong>💡 Pourquoi ça marche :</strong><br>
-                    La curation comme routine (Trend Reporting). En donnant les tendances de la semaine, le créateur devient le radar officiel de son audience. Couplé avec l'automatisation "Commente TRENDING pour les templates" = Combo gagnant.
-                </div>
-                <a href="https://www.instagram.com/p/DVQ58r4Difs/" target="_blank" class="btn">Voir le post Instagram</a>
-            </div>
-        </article>
-
-        <article class="post-card">
-            <img src="https://scontent-den2-1.cdninstagram.com/v/t51.71878-15/639868700_2481691265619792_2989672865364049728_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=scontent-den2-1.cdninstagram.com&_nc_cat=100&_nc_oc=Q6cZ2QFqWRTKJZS_GvxpPqZEyD3Spjyv4-VOzASJRQhIblLUQzJ9774ghTsAGXk40MlGylrEGfL0LZjbbbk05EdkSkQN&_nc_ohc=G2u_OOQio5gQ7kNvwG7Xo4r&_nc_gid=nZ4IhEfS8f1gbUdd-BpJFw&edm=APs17CUBAAAA&ccb=7-5&oh=00_AfuRrHx2ya2c7NomdOiwMjuadR8_pRPIGH8DiLVVch4ONQ&oe=69A7BD8B&_nc_sid=10d13b" alt="Post image" class="post-img">
-            <div class="post-content">
-                <div class="meta">
-                    <span>@thekatelynrhoades</span>
-                    <span>❤️ 92</span>
-                </div>
-                <p class="caption">Another REELS update 🔥 INSTAGRAM DROPPED info on this new design feature they’re testing and this explains why so many are seeing a decrease in likes and comments right now. Comment: TRENDS...</p>
-                <div class="insight">
-                    <strong>💡 Pourquoi ça marche :</strong><br>
-                    Newsjacking pur. Surfer sur l'anxiété universelle des créateurs (la baisse d'engagement) en expliquant que "C'est la faute à l'algorithme, pas la vôtre" apporte un soulagement psychologique très partagé en story.
-                </div>
-                <a href="https://www.instagram.com/p/DVObzMjDmSA/" target="_blank" class="btn">Voir le post Instagram</a>
-            </div>
-        </article>
-
-        <article class="post-card">
-            <img src="https://scontent-bos5-1.cdninstagram.com/v/t51.82787-15/641752513_17915390712296452_1983630232227961841_n.jpg?stp=dst-jpg_e15_fr_p1080x1080_tt6&_nc_ht=scontent-bos5-1.cdninstagram.com&_nc_cat=1&_nc_oc=Q6cZ2QHh3FSo53Byu-DTjTx4YaL1uap_uFsUPOJ_cYPCeeTvRXGLoEQg_q0865PGzA5r00E&_nc_ohc=S9cIHH-WjM0Q7kNvwHW3-XH&_nc_gid=h8I6iD9E8JImts7UPHmThw&edm=APs17CUBAAAA&ccb=7-5&oh=00_AfuPjRRbb3PzIVYS4CUcxDAavwgcGduufT448KBLeB8NQQ&oe=69A7C5DD&_nc_sid=10d13b" alt="Post image" class="post-img">
-            <div class="post-content">
-                <div class="meta">
-                    <span>@socialsyncflow</span>
-                    <span>❤️ 2952</span>
-                </div>
-                <p class="caption">Comment “DAILY” and get the exact strategies behind 26M views, 30K followers & thousands of leads in 90 days - delivered in 90-second lessons for 30 days....</p>
-                <div class="insight">
-                    <strong>💡 Pourquoi ça marche :</strong><br>
-                    Preuve sociale intraitable ("26M views, 30K followers") associée à une micro-friction ("90-second lessons"). Promettre un résultat massif via un effort minime fait exploser le taux d'opt-in par commentaire "DAILY".
-                </div>
-                <a href="https://www.instagram.com/p/DVG5GmUDJLG/" target="_blank" class="btn">Voir le post Instagram</a>
-            </div>
-        </article>
-
-        <article class="post-card">
-            <img src="https://instagram.fluk1-1.fna.fbcdn.net/v/t51.82787-15/640393974_18387123562153388_8881111216190311632_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=instagram.fluk1-1.fna.fbcdn.net&_nc_cat=108&_nc_oc=Q6cZ2QGGg64dP7POMp5yYS5Oj5eD7hu3n7sm_nUzfSGMiux44LLFHCWtaVoAXFROsadSUlg&_nc_ohc=WTvrWW2FYdEQ7kNvwHzM_-C&_nc_gid=vbFgXJs_ILl3ZiS7dXZjDA&edm=APs17CUBAAAA&ccb=7-5&oh=00_Afss0P2xrWvhcrm7Am8jlrULuGFnos0YPXtw6dfPYoik0Q&oe=69A7AE1F&_nc_sid=10d13b" alt="Post image" class="post-img">
-            <div class="post-content">
-                <div class="meta">
-                    <span>@_socialsam_</span>
-                    <span>❤️ 205</span>
-                </div>
-                <p class="caption">✨ [Post ideas for the week 🗓️] ✨
-
-Here’s a little inspo to make planning content for this week easier (and faster) 👆🏻🗓️
-
-Simple ideas to help you create your content for the week ✨
-
-💡 Comment “templates” and I’ll send you the link to these (and many other) templates 💌
-
-#contentidea #postidea  ...</p>
-                <div class="insight">
-                    <strong>💡 Pourquoi ça marche :</strong><br>
-                    Méta-création. Aider son audience à planifier sa propre semaine de contenus est la valeur d'utilité ultime en B2B/Solopreneur. Demander de commenter "templates" alimente la base e-mail sans quitter la plateforme.
-                </div>
-                <a href="https://www.instagram.com/p/DVGxOHIDo0g/" target="_blank" class="btn">Voir le post Instagram</a>
-            </div>
-        </article>
-
-        <article class="post-card">
-            <img src="https://scontent-msp1-1.cdninstagram.com/v/t51.82787-15/564296020_17899929645296452_6106426001617081786_n.jpg?stp=dst-jpg_e15_fr_p1080x1080_tt6&_nc_ht=scontent-msp1-1.cdninstagram.com&_nc_cat=104&_nc_oc=Q6cZ2QGXUxOPe1NZ7e7d2p89mxRLgeizr_K0QNAOTz3bCLMrlWy4eFPFSPQfoqIIwMPPDaQ&_nc_ohc=JGIcOr-ytX0Q7kNvwH9GOBc&_nc_gid=QWeI1h9XMLtrPEo1i_MINQ&edm=APs17CUBAAAA&ccb=7-5&oh=00_AfuwF5l48-h_n9H7Z_b2UGJuSH8_d1wfA1iLqje2Nt5V5g&oe=69A7B4F5&_nc_sid=10d13b" alt="Post image" class="post-img">
-            <div class="post-content">
-                <div class="meta">
-                    <span>@socialsyncflow</span>
-                    <span>❤️ 189</span>
-                </div>
-                <p class="caption">What started as two women who were just tired of the noise, 
-turned into a brand that helps thousands find clarity, flow & freedom in their business again.
-
-We’ve both lived through the hustle, the burnout, and the endless chase to “make it” online.
-And at some point, we realized success that doesn’...</p>
-                <div class="insight">
-                    <strong>💡 Pourquoi ça marche :</strong><br>
-                    Brand Storytelling & Vulnérabilité. Briser l'injonction permanente du "hustle" en parlant de burn-out crée une résonance émotionnelle puissante qui fidélise durablement par contraste avec le bruit ambiant.
-                </div>
-                <a href="https://www.instagram.com/p/DPwoZ7zDJ_4/" target="_blank" class="btn">Voir le post Instagram</a>
-            </div>
-        </article>
-
-        <article class="post-card">
-            <img src="https://scontent-yyz1-1.cdninstagram.com/v/t51.82787-15/616165436_17910347466296452_4268639640952006469_n.jpg?stp=dst-jpg_e35_p1080x1080_sh0.08_tt6&_nc_ht=scontent-yyz1-1.cdninstagram.com&_nc_cat=104&_nc_oc=Q6cZ2QFQyPVtW7B9hw4siXs6DOZFH9bxhDbVXuFENaWMhaIuQeFEguMUvD-dBg2CnhnDe3g&_nc_ohc=7s7itNx8pbEQ7kNvwH3oQZa&_nc_gid=1PGwdw2fLFliUeFhU8rZ-g&edm=APs17CUBAAAA&ccb=7-5&oh=00_AftAHOZl9qvyIvGqu2vtOHwrQXo-L2cjo2gSWwE9M5V0iA&oe=69A79F4F&_nc_sid=10d13b" alt="Post image" class="post-img">
-            <div class="post-content">
-                <div class="meta">
-                    <span>@socialsyncflow</span>
-                    <span>❤️ 65</span>
-                </div>
-                <p class="caption">LAUNCH DAY 🪩 For the next 72 hours only, you get $400 off.
-After that, the price goes up and this is the lowest it will ever be.
-
-After months of creating, filming, editing, refining, and testing,
-The 90-Day Growth Engine is officially open.
-
-This isn’t another course to save and forget.
-It’s built...</p>
-                <div class="insight">
-                    <strong>💡 Pourquoi ça marche :</strong><br>
-                    Urgence temporelle stricte ("72 hours only"). Post pur d'activation de vente sur audience chaude. Le discount massif ($400) couplé à une deadline courte déclenche l'achat impulsif des indécis.
-                </div>
-                <a href="https://www.instagram.com/p/DTiUbFqDAcT/" target="_blank" class="btn">Voir le post Instagram</a>
-            </div>
-        </article>
-
-        <article class="post-card">
-            <img src="https://scontent-atl3-3.cdninstagram.com/v/t51.82787-15/640404518_18391597228195531_1073252211401223201_n.jpg?stp=dst-jpg_e35_p1080x1080_sh0.08_tt6&_nc_ht=scontent-atl3-3.cdninstagram.com&_nc_cat=107&_nc_oc=Q6cZ2QHJLapT4JenA2xVbnk1YGl4HDQ-_FvPhd6ZKIXN9rLeAZ8Qjb3qT3yj-JpKxBBUWqg&_nc_ohc=59Fd8ZulCn4Q7kNvwEOY3Ri&_nc_gid=b0OoyTJ9XOpcQKyqCgdg2A&edm=APs17CUBAAAA&ccb=7-5&oh=00_AfulNXpalPfkAk-M8hulHHXVOW8nMOaipVsPLOGYtyPijQ&oe=69A7AB1C&_nc_sid=10d13b" alt="Post image" class="post-img">
-            <div class="post-content">
-                <div class="meta">
-                    <span>@holler.academy</span>
-                    <span>❤️ 428</span>
-                </div>
-                <p class="caption">Instagram growth ISN’T linear! 🙅🏻‍♀️
-
-Many people will look at ‘successful’ accounts and see: followers, views, engagement…
-
-They might think thinks like ‘they were lucky’
-
-Or ‘oh they just went viral a few times’
-
-But what they won’t see is…..
-
-⏰ the time it took to get there
-
-🙇🏻‍♀️ the tireles...</p>
-                <div class="insight">
-                    <strong>💡 Pourquoi ça marche :</strong><br>
-                    Myth-busting et empathie sectorielle. Démystifier le succès instantané ("growth isn't linear") valide la frustration quotidienne des autres créateurs, favorisant un engagement de soutien et de nombreux partages communautaires.
-                </div>
-                <a href="https://www.instagram.com/p/DVLVNAECqe_/" target="_blank" class="btn">Voir le post Instagram</a>
-            </div>
-        </article>
-
-        <article class="post-card">
-            <img src="https://scontent-hou1-1.cdninstagram.com/v/t51.82787-15/629132173_18391887742195531_1939314500972077259_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=scontent-hou1-1.cdninstagram.com&_nc_cat=107&_nc_oc=Q6cZ2QF1POhOh1g4l3NzUX9qXpA7f4D0ywL_juy2_AbFP2AkPFQ2ZP6I63C2U5vt6bCMJPg&_nc_ohc=a5acb5KC7IUQ7kNvwF6hYdx&_nc_gid=lP5EZH5RXYhDH4rpqGjoeg&edm=APs17CUBAAAA&ccb=7-5&oh=00_AfszREucgU5l4JG-b1sYi4U4imxgIOxTTCMkog4vUa23LQ&oe=69A7A334&_nc_sid=10d13b" alt="Post image" class="post-img">
-            <div class="post-content">
-                <div class="meta">
-                    <span>@holler.academy</span>
-                    <span>❤️ 73</span>
-                </div>
-                <p class="caption">REELS ARE DEAD 💀 Carousels are what’s working on Instagram right now! 🏆
-
-One of the most UNDERRATED content types on Instagram is by far: CAROUSELS!! 🎠
-
-Carousels were the foundation of my growth & success on Instagram, and they’re still my most used content type today 💞
-
-And with results like t...</p>
-                <div class="insight">
-                    <strong>💡 Pourquoi ça marche :</strong><br>
-                    Statement polarisant. "Reels are dead" est une accroche iconoclaste qui force le clic. S'imposer à contre-courant du consensus général (le tout-vidéo) pour pousser le format Carrousel asseoit une figure d'expert visionnaire.
-                </div>
-                <a href="https://www.instagram.com/p/DVRNVWtCrtD/" target="_blank" class="btn">Voir le post Instagram</a>
-            </div>
-        </article>
-
-        <article class="post-card">
-            <img src="https://scontent-ord5-3.cdninstagram.com/v/t51.82787-15/640945032_18391772881195531_6687280682591187129_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=scontent-ord5-3.cdninstagram.com&_nc_cat=107&_nc_oc=Q6cZ2QHdeWTVK_I43FYjpWwo-LRnkAU3wso3gCuk5NL077CxFMlitjsuiv69zzDmxooXcoE&_nc_ohc=fNLhDWTd5moQ7kNvwG2fVCK&_nc_gid=s_BNxvGwVN9f4Un9p6seiw&edm=APs17CUBAAAA&ccb=7-5&oh=00_AftwxxJS-UjTigB36BtFYaSqbeQGRcYoq9snSQ5fnijlMw&oe=69A7BCBF&_nc_sid=10d13b" alt="Post image" class="post-img">
-            <div class="post-content">
-                <div class="meta">
-                    <span>@holler.academy</span>
-                    <span>❤️ 133</span>
-                </div>
-                <p class="caption">How to create incredible macro-content (longer form content like carousels and talking videos) ❤️
-
-The MACRO-CONTENT MASTERCLASS is finally here 😍😍👇🏽
-
-The other day I taught you all how to make INCREDIBLE pieces of micro content 🐭
-
-A few days before that I taught you the difference between the ...</p>
-                <div class="insight">
-                    <strong>💡 Pourquoi ça marche :</strong><br>
-                    Création d'un lexique propriétaire (Macro vs Micro content). Structurer ses posts sous forme de "Masterclass" ajoute une immense valeur perçue à de simples carrousels, favorisant leur rétention et sauvegarde.
-                </div>
-                <a href="https://www.instagram.com/p/DVO2g-VCseX/" target="_blank" class="btn">Voir le post Instagram</a>
-            </div>
-        </article>
-
-        <article class="post-card">
-            <img src="https://scontent-lga3-1.cdninstagram.com/v/t51.82787-15/638287592_18566905237053386_3407553305683701314_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=scontent-lga3-1.cdninstagram.com&_nc_cat=102&_nc_oc=Q6cZ2QH8DhLdC6ENxySFmyX3BwYmYcRYNn5VrtBEPgiAsPDXmTIxB_M2amqRjcG8JfaqRLw&_nc_ohc=yg5p8WefSmQQ7kNvwGuktwv&_nc_gid=UUCYOlCsbjO2ya1fQ9rT3Q&edm=APs17CUBAAAA&ccb=7-5&oh=00_Aft-6thwu2KjbvHOrxOrtCvbjwTbdvQEinroEQsXg3hTNg&oe=69A7C13A&_nc_sid=10d13b" alt="Post image" class="post-img">
-            <div class="post-content">
-                <div class="meta">
-                    <span>@thekatelynrhoades</span>
-                    <span>❤️ 62</span>
-                </div>
-                <p class="caption">Here’s what’s HOT 👉 on social right now
-
-1. Save this post so you can refer back to it when you go to make your content
-
-2. If you like what you see; imagine joining us inside of Club Enfluence & getting these trends sent to you every Monday with specific examples for your BIZ AND NICHE?!!
-
-It’s ha...</p>
-                <div class="insight">
-                    <strong>💡 Pourquoi ça marche :</strong><br>
-                    Le "Teaser" parfait. L'offre "Voici ce qui est chaud" génère l'engagement d'attention. L'étape 2 (vendre le Club exclusif) montre intelligemment qu'il y a un niveau de service supérieur pour ceux qui en veulent plus.
-                </div>
-                <a href="https://www.instagram.com/p/DVQ8es-jg_z/" target="_blank" class="btn">Voir le post Instagram</a>
-            </div>
-        </article>
-
-        <article class="post-card">
-            <img src="https://instagram.fmba5-2.fna.fbcdn.net/v/t51.82787-15/626799017_17912478333296452_8878365037215574678_n.jpg?stp=dst-jpg_e35_p1080x1080_sh0.08_tt6&_nc_ht=instagram.fmba5-2.fna.fbcdn.net&_nc_cat=104&_nc_oc=Q6cZ2QFT1mRcMnkAdT1Pv2-Mvhk9NoUJ5BX_y0Cp8f7f19xIjOxemv2PBbZSBulRldn8KWc&_nc_ohc=2IEs8-fgsgMQ7kNvwGS2JPr&_nc_gid=QndrAkD13egVwLWHvy9RYA&edm=APs17CUBAAAA&ccb=7-5&oh=00_AftrwQL_hJ2aHBJ2tywezYp0aAJlHN_GXrsUwQxrWyVCMQ&oe=69A796B6&_nc_sid=10d13b" alt="Post image" class="post-img">
-            <div class="post-content">
-                <div class="meta">
-                    <span>@socialsyncflow</span>
-                    <span>❤️ 153</span>
-                </div>
-                <p class="caption">You need a decision ⬇️ 
-
-A decision to stop guessing.
-To stop posting without a clear direction.
-To stop building growth that depends on being online 24/7.
-The next 90 days can change how you use Instagram, 
-from random posting to intentional growth, predictable sales
-and systems that give you freed...</p>
-                <div class="insight">
-                    <strong>💡 Pourquoi ça marche :</strong><br>
-                    Posture "Tough Love". Parler fermement à son audience en pointant ses erreurs ("stop guessing") positionne l'auteur comme l'autorité capable de corriger ces dysfonctionnements grâce à des "systèmes prédictibles".
-                </div>
-                <a href="https://www.instagram.com/p/DUOVsX5DP0s/" target="_blank" class="btn">Voir le post Instagram</a>
-            </div>
-        </article>
-
-        <article class="post-card">
-            <img src="https://scontent-bos5-1.cdninstagram.com/v/t51.71878-15/634208868_925707573165538_4716767659997257045_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=scontent-bos5-1.cdninstagram.com&_nc_cat=110&_nc_oc=Q6cZ2QH8VbMcso6bGWDcdShyPPHt8duwzUB-djYh0yzH1qDi2Xv7WNeeIDx_14yofD05tAaKtj7Ix071RiXZS2wmQGp1&_nc_ohc=yTmN-auzJs0Q7kNvwEWhaCf&_nc_gid=_8trlAQ2gSVk8g-QKN2BDw&edm=APs17CUBAAAA&ccb=7-5&oh=00_Afug_OjO-faZjAv1suYbP-rgNNZQnLImQQEDcyToqMJ-2w&oe=69A79782&_nc_sid=10d13b" alt="Post image" class="post-img">
-            <div class="post-content">
-                <div class="meta">
-                    <span>@holler.academy</span>
-                    <span>❤️ 78</span>
-                </div>
-                <p class="caption">🚨TRENDING REEL ALERT 🚨 Canva Template deets below👇
-
-I made this trending Polaroid Moodboard reel into a super easy to use Canva Template ☁️🧸
-
-💬 Comment: “MOOD” for the link 🤍
-
-HOW TO USE:
-
-☁️ USE A TEMPLATE:
-
-🧸 Use my Canva template to do this for you! Just open up and drag the images you wan...</p>
-                <div class="insight">
-                    <strong>💡 Pourquoi ça marche :</strong><br>
-                    Friction Zéro = Viralité assurée. Ne pas se contenter d'identifier une tendance, mais la livrer sous forme de template Canva prémâché ("Drag and drop"). Le mot-clé "MOOD" génère le flux de leads entrants.
-                </div>
-                <a href="https://www.instagram.com/p/DVHHY6UCnK7/" target="_blank" class="btn">Voir le post Instagram</a>
-            </div>
-        </article>
-
-        <article class="post-card">
-            <img src="https://scontent-mia3-2.cdninstagram.com/v/t51.82787-15/627276698_18391484305195531_3806802255740003432_n.jpg?stp=dst-jpg_e15_fr_p1080x1080_tt6&_nc_ht=scontent-mia3-2.cdninstagram.com&_nc_cat=107&_nc_oc=Q6cZ2QGus-C9ZYIktRbmL-vpz4SvYhctf2Xw5VmTwkGy2I0d-K6bxuAlrQbCd3GA1X6A7e0&_nc_ohc=rVyCf7laOe0Q7kNvwGmWb-a&_nc_gid=VdVCxG4284LkuqdOmwYhuA&edm=APs17CUBAAAA&ccb=7-5&oh=00_AfviybXVt4vlUSiqxyk4yxsVXBkobavrims9n2dNLLeXVQ&oe=69A7A302&_nc_sid=10d13b" alt="Post image" class="post-img">
-            <div class="post-content">
-                <div class="meta">
-                    <span>@holler.academy</span>
-                    <span>❤️ 589</span>
-                </div>
-                <p class="caption">CAROUSEL TRENDS FOR THE WEEK - March 2026 😍
-
-✨PART ONE✨
-
-I’ve seen some shocking information about carousels that I’m going to share with you this week (stay tuned for that!!)
-
-But all you need to know right now is that carousels are THE content type you need to be posting in early 2026!
-
-This is n...</p>
-                <div class="insight">
-                    <strong>💡 Pourquoi ça marche :</strong><br>
-                    Sérialisation du contenu. Le format "Part One" fidélise l'audience pour les prochains jours. De plus, réitérer sur le "Carousel Trend" ancre définitivement cette thématique comme une opportunité immanquable dans l'esprit de l'audience.
-                </div>
-                <a href="https://www.instagram.com/p/DVIzt29CncH/" target="_blank" class="btn">Voir le post Instagram</a>
-            </div>
-        </article>
-
-        <article class="post-card">
-            <img src="https://scontent-sjc3-1.cdninstagram.com/v/t51.82787-15/640907847_18314782753270296_5486734138880464746_n.jpg?stp=dst-jpg_e35_p1080x1080_sh0.08_tt6&_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_cat=100&_nc_oc=Q6cZ2QGbeAiJh_JLBi8q2wEVIgbDLTTFAQyxe7mYi-5HM9O2xrMIheQ1rSJ6US04ZniKcGU&_nc_ohc=cWTc5b6i7Z4Q7kNvwGrCUnG&_nc_gid=cERuNs005-7u6BmtE05k_Q&edm=APs17CUBAAAA&ccb=7-5&oh=00_AftjqBwj76pJz71fB9oQ9SD10MaRBw8uEBBD5wl-WRaTNg&oe=69A7B69F&_nc_sid=10d13b" alt="Post image" class="post-img">
-            <div class="post-content">
-                <div class="meta">
-                    <span>@likfoon</span>
-                    <span>❤️ 31</span>
-                </div>
-                <p class="caption">The real meaning underneath Chinese New Year.
-
-For me, it’s gratitude, growth, presence.
-
-2025 was amazing.
-2026 is already better.
-
-Grateful for another year around the same table.
-
-PS: This year, I said I want to document more than create. Hopefully, these short stories inspire you!
-
-—
-Shot on Son...</p>
-                <div class="insight">
-                    <strong>💡 Pourquoi ça marche :</strong><br>
-                    Authenticité B-Roll "Documentaire". Le contraste visuel (cinématique vs contenu fast-food) couplé à un message universel d'introspection (gratitude). Capter de l'attention par la respiration narrative au milieu d'un feed saturé.
-                </div>
-                <a href="https://www.instagram.com/p/DVL50laEcUi/" target="_blank" class="btn">Voir le post Instagram</a>
-            </div>
-        </article>
-
-        <article class="post-card">
-            <img src="https://scontent-dfw5-2.cdninstagram.com/v/t51.82787-15/642167951_17978567150985808_3489112082018937303_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=scontent-dfw5-2.cdninstagram.com&_nc_cat=104&_nc_oc=Q6cZ2QF0uMTpwy9hGGMiJ9PKlW4obrn0-dUYAuLtaqax7ujFQykXz1-VznDAjZug1sZ7jzc&_nc_ohc=q4cvf4aNPdwQ7kNvwFHR6rl&_nc_gid=FN9w0z7meb7BcE3mVuLiCg&edm=APs17CUBAAAA&ccb=7-5&oh=00_AftmA7m40ep6l0473rYv9XnWSJV4TtnhpHUGIAYGis3_GQ&oe=69A7B301&_nc_sid=10d13b" alt="Post image" class="post-img">
-            <div class="post-content">
-                <div class="meta">
-                    <span>@social.unicorns</span>
-                    <span>❤️ 2322</span>
-                </div>
-                <p class="caption">MARCH 2026 SOCIAL MEDIA TRENDS - PART 2 💐🌷
-
-Trend 1: Consistency trend  @nori 
-Trend 2: Congratulations everyone  @olivialodenius 
-Trend 3: Rapid outfit check  @evajan.x 
-Trend 4: When your husband thinks you’ll grow old together  @imshannonwu 
-Trend 5: Travel diary  @anastasiiadiary 
-Trend 6: Fee...</p>
-                <div class="insight">
-                    <strong>💡 Pourquoi ça marche :</strong><br>
-                    Curation collaborative. L'effet "Catalogue" taguant plusieurs autres créateurs (@) croise les audiences et positionne le compte comme l'annuaire ultime des best-practices du mois. Ultra performant pour la viralité indirecte.
-                </div>
-                <a href="https://www.instagram.com/p/DVOX7BYDKJv/" target="_blank" class="btn">Voir le post Instagram</a>
-            </div>
-        </article>
-
-        <article class="post-card">
-            <img src="https://scontent-lax3-2.cdninstagram.com/v/t51.82787-15/640371733_18314564149270296_5341504493260665063_n.jpg?stp=dst-jpg_e35_p1080x1080_sh0.08_tt6&_nc_ht=scontent-lax3-2.cdninstagram.com&_nc_cat=100&_nc_oc=Q6cZ2QGadF6hox05TslIe0de0QqM5NWUHtW-EwZts7Jz_x1JQfZhfUEOKfmZay3GgPGLUgA&_nc_ohc=SUM_RiT8j9kQ7kNvwEG-Vck&_nc_gid=3sa3b2sMvDATPwbf1Da5zA&edm=APs17CUBAAAA&ccb=7-5&oh=00_Afv0MATL44EIqdhqjvGrVTecKKa_w8wCVGgDWNzGSECKsg&oe=69A79C35&_nc_sid=10d13b" alt="Post image" class="post-img">
-            <div class="post-content">
-                <div class="meta">
-                    <span>@likfoon</span>
-                    <span>❤️ 60</span>
-                </div>
-                <p class="caption">Create content consistently and efficiently with your voice 🗣️
-
-Speakly is a new voice-to-text AI tool that turns your speech into clear and polished messages, emails and writings.
-
-4x faster than typing!
-
-Sign up now to get 7 days completely free, and you can earn up to a month of free access by i...</p>
-                <div class="insight">
-                    <strong>💡 Pourquoi ça marche :</strong><br>
-                    Growth hack via l'outillage (AI Tool Review). Les créateurs B2B raffolent des astuces de productivité. Présenter un outil précis (Speakly) avec une promesse forte ("4x faster") incite massivement à la sauvegarde pour plus tard.
-                </div>
-                <a href="https://www.instagram.com/p/DVGnk4tkY8o/" target="_blank" class="btn">Voir le post Instagram</a>
-            </div>
-        </article>
-
-        <article class="post-card">
-            <img src="https://scontent-lax3-1.cdninstagram.com/v/t51.82787-15/641356840_17978461274985808_5008701715957087578_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_cat=104&_nc_oc=Q6cZ2QFD8ASw2RUhUL-SDzmeVNt6viznbYZMlnGLUY5Rncc78l60IysXSa7NBtH7u901j_k&_nc_ohc=NXjgZlacE0QQ7kNvwEp8iJJ&_nc_gid=XKGt9ozDqcsGMz_rmyzBrQ&edm=APs17CUBAAAA&ccb=7-5&oh=00_Aft-QldHHB-SbFDqlqugEwy0uVRQKMhv-j8_0_9Daqrw2w&oe=69A79726&_nc_sid=10d13b" alt="Post image" class="post-img">
-            <div class="post-content">
-                <div class="meta">
-                    <span>@social.unicorns</span>
-                    <span>❤️ 3278</span>
-                </div>
-                <p class="caption">MARCH 2026 SOCIAL MEDIA TRENDS - PART 1 🌸
-
-Trend 1: My nervous system  @katstickler 
-Trend 2: POV: I fell but I saved my matcha  @jessideoliveira @leiafelicilda 
-Trend 3: What’s the plan?  @minjujo 
-Trend 4: A soft brag  @annacwoodring @selenagomez @rarebeauty 
-Trend 5: Nationality trend  @s.tylin ...</p>
-                <div class="insight">
-                    <strong>💡 Pourquoi ça marche :</strong><br>
-                    Binge-watching algorithmique. Une liste fragmentée ("Part 1") donne immédiatement envie de scroller vers le profil pour trouver la Part 2. Ces cartographies de trends sont les aimants à partage par excellence en agence.
-                </div>
-                <a href="https://www.instagram.com/p/DVL9JEdDPhj/" target="_blank" class="btn">Voir le post Instagram</a>
-            </div>
-        </article>
-
-        <article class="post-card">
-            <img src="https://scontent-hou1-1.cdninstagram.com/v/t51.82787-15/623373052_18091048400283906_417769845711911899_n.jpg?stp=dst-jpg_e15_fr_p1080x1080_tt6&_nc_ht=scontent-hou1-1.cdninstagram.com&_nc_cat=106&_nc_oc=Q6cZ2QF0q40dw83ct1ZsVZP6JnGJSzYmxRHfccOsN10dQfjVguBqi5vNNc8bjkr2u42zzQQ&_nc_ohc=6EoDYGZq0uoQ7kNvwEEdDIY&_nc_gid=jJeFqlCR9TSVle7-Ir19PA&edm=APs17CUBAAAA&ccb=7-5&oh=00_AfvVYfayTcdzh7f3dDqJDYdFpy5r3IGzCdye2ok-Gyt_Nw&oe=69A7ACDF&_nc_sid=10d13b" alt="Post image" class="post-img">
-            <div class="post-content">
-                <div class="meta">
-                    <span>@elasmarketingservices</span>
-                    <span>❤️ 5234</span>
-                </div>
-                <p class="caption">🚨THIS girl dinner is pitch perfect! Here are THE February Social Media Trends happening right now!
-
-I bet you didn’t see that fake green screen coming but honestly that’s the way I like it ;) 
-
-Now SAVE, SHARE & USE these February social media trends to stay head of things.
-
-Part two dropping next ...</p>
-                <div class="insight">
-                    <strong>💡 Pourquoi ça marche :</strong><br>
-                    Créativité Méta ("Fake green screen"). En cassant les codes classiques B2B avec des mèmes de type "girl dinner", on crée un effet de surprise ("pattern interrupt") qui empêche le zapping au milieu des carrousels éducatifs traditionnels.
-                </div>
-                <a href="https://www.instagram.com/p/DUEEyJsj3Du/" target="_blank" class="btn">Voir le post Instagram</a>
-            </div>
-        </article>
-
-        <article class="post-card">
-            <img src="https://instagram.fwbw1-1.fna.fbcdn.net/v/t51.71878-15/639774857_1343657617527962_3334592680733933545_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=instagram.fwbw1-1.fna.fbcdn.net&_nc_cat=102&_nc_oc=Q6cZ2QHMSOPyYoxfk8jWsCkX29-_TAa1ENiht0wOWR4g07F-xvjbc69gRqU3Ey6VIBJ5Npk&_nc_ohc=jZfzSVrfzuAQ7kNvwFgCulR&_nc_gid=37azr85XtedEQsmvVwGFOQ&edm=APs17CUBAAAA&ccb=7-5&oh=00_Afs_7ZZnNOqx-RkBic3Ivbhm4_ktBv0KoERDVPDx3eLPNA&oe=69A7B13A&_nc_sid=10d13b" alt="Post image" class="post-img">
-            <div class="post-content">
-                <div class="meta">
-                    <span>@elasmarketingservices</span>
-                    <span>❤️ 356</span>
-                </div>
-                <p class="caption">February so far.
-
-Hang in there Punch. We get it. 
-
-#socialmediamanager #socialmediamanagement #socialmediastrategy #socialmediamarketing #socialmediamemes...</p>
-                <div class="insight">
-                    <strong>💡 Pourquoi ça marche :</strong><br>
-                    Relatability culture (Niche Humor). Les mèmes ultra-spécifiques pour une profession ciblée (Social Media Managers) s'envoient en boucle par DM. Un hack excellent pour relancer son reach indirect avec un format bas-effort.
-                </div>
-                <a href="https://www.instagram.com/p/DVOnneGjjhX/" target="_blank" class="btn">Voir le post Instagram</a>
-            </div>
-        </article>
-
-        <article class="post-card">
-            <img src="https://scontent-lga3-1.cdninstagram.com/v/t51.71878-15/641219971_2928804940812575_3606905528648123526_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=scontent-lga3-1.cdninstagram.com&_nc_cat=111&_nc_oc=Q6cZ2QG51Uxr--gYxvn9zd8O3ZIJ5aprI4GrG02POKPtItXiftnhxYLupMe3tQQH0Ts-jOo&_nc_ohc=XhubTr4kVBIQ7kNvwHHPAlb&_nc_gid=0cIc6Xxii4fGoUArJgim9A&edm=APs17CUBAAAA&ccb=7-5&oh=00_AfsSxB2eE8ChyXhnNi31PNV3PKNwj4st7vZiMshgKhcQaw&oe=69A7A89E&_nc_sid=10d13b" alt="Post image" class="post-img">
-            <div class="post-content">
-                <div class="meta">
-                    <span>@mortgageswithmallory</span>
-                    <span>❤️ 97</span>
-                </div>
-                <p class="caption">I'm just a simple girl with simple taste. 
-
-#michiganlaonofficer #michiganrealtor #michiganrealestate #grandrapidsrealtor #grandrapidsmichigan...</p>
-                <div class="insight">
-                    <strong>💡 Pourquoi ça marche :</strong><br>
-                    Audio trend adapté à une niche (Real Estate). C'est le parangon de la tendance B-Roll : une phrase d'accroche visuelle accrocheuse sur un fond vidéo simple, qui tourne en boucle ("loop value") et booste le watchtime.
-                </div>
-                <a href="https://www.instagram.com/p/DVQu0hoEg_0/" target="_blank" class="btn">Voir le post Instagram</a>
-            </div>
-        </article>
-
-        <article class="post-card">
-            <img src="https://scontent-bos5-1.cdninstagram.com/v/t51.82787-15/628718179_18093081218283906_3876254373602823782_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=scontent-bos5-1.cdninstagram.com&_nc_cat=106&_nc_oc=Q6cZ2QG6yuhcEDUgIl5nPUthhT9WhHCAFcnWg9s7GigGESUEhekFh8INdbOiqg7KRilmoFI&_nc_ohc=7ulXXQ2rM7MQ7kNvwFefMQE&_nc_gid=MLcHAMv8084YrUhC_hrvbw&edm=APs17CUBAAAA&ccb=7-5&oh=00_AfsuqVA1ZUt-UI4tlXQnHxq1KjkJMzs3JE5PzxdMWnOCWQ&oe=69A79945&_nc_sid=10d13b" alt="Post image" class="post-img">
-            <div class="post-content">
-                <div class="meta">
-                    <span>@elasmarketingservices</span>
-                    <span>❤️ 1451</span>
-                </div>
-                <p class="caption">Sorry, I lied. There’s more. 
-
-This is only part 1 of currently trending carousel posts so keep an eye out for part two next week. 
-
-And if you need any trending carousel templates, make sure to check out my Etsy store for social media templates. The detail boxes edit template is literally dropping ...</p>
-                <div class="insight">
-                    <strong>💡 Pourquoi ça marche :</strong><br>
-                    Monétisation instantanée (Bridging). Le post fournit la valeur (les carrousels tendances) et vend immédiatement la solution clé en main (Template sur la boutique Etsy). Parfait alignement entre inspiration et conversion d'achat.
-                </div>
-                <a href="https://www.instagram.com/p/DU6YOFAkSTW/" target="_blank" class="btn">Voir le post Instagram</a>
-            </div>
-        </article>
-
-        <article class="post-card">
-            <img src="https://scontent-iad3-1.cdninstagram.com/v/t51.82787-15/638896054_18387467935153388_8730106313108031434_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=scontent-iad3-1.cdninstagram.com&_nc_cat=108&_nc_oc=Q6cZ2QHtCAs7jWCo5iSfLkeDNbZlBQ-BHTx2-wXrAzK52ax599brjuAdindaMuPmx1OY7Zk&_nc_ohc=eq3kdamciekQ7kNvwEBlKMT&_nc_gid=OfKyCLIDRzw_vwVkqP6vAQ&edm=APs17CUBAAAA&ccb=7-5&oh=00_AfuJqGoiKg0e_wp19urUZFm6blo08VRD9fjfjCfgar2Yuw&oe=69A7B922&_nc_sid=10d13b" alt="Post image" class="post-img">
-            <div class="post-content">
-                <div class="meta">
-                    <span>@_socialsam_</span>
-                    <span>❤️ 277</span>
-                </div>
-                <p class="caption">💡[5-minute Reels trending right now]✈️
-
-They’re:
-
-✔️easy to create
-✔️they stop the scroll
-✔️easy to customize to your biz ↗️
-
-Need more Reels inspo? 👀
-
-Inside my membership, you get 20 of these every month - complete with scripts, trending audios & step-by-step filming tips 📝
-
-Comment “TRENDING” ...</p>
-                <div class="insight">
-                    <strong>💡 Pourquoi ça marche :</strong><br>
-                    Briser l'objection du temps ("5-minute Reels"). Promettre une méthode rapide pour un format réputé chronophage attire instantanément. La vente en upsell via le commentaire "TRENDING" fluidifie totalement l'onboarding au membership.
-                </div>
-                <a href="https://www.instagram.com/p/DVOkgQgDtFM/" target="_blank" class="btn">Voir le post Instagram</a>
-            </div>
-        </article>
-
-        <article class="post-card">
-            <img src="https://scontent-lga3-1.cdninstagram.com/v/t51.82787-15/630175264_18561310843053386_4050647979961216477_n.jpg?stp=dst-jpg_e15_fr_p1080x1080_tt6&_nc_ht=scontent-lga3-1.cdninstagram.com&_nc_cat=102&_nc_oc=Q6cZ2QGdJlo7r950vGxJrTwQ-tFHfRMSTdZFX8qqnB20E2Zilz2hQEe9BZrxhaCK5Ysl5sI&_nc_ohc=CpARBtbw2F8Q7kNvwHOmh-R&_nc_gid=Et8WF5E-olBWYB7CWngqXA&edm=APs17CUBAAAA&ccb=7-5&oh=00_Afsy4uP6Hfi2vVALl7ETaKgZqiT-7atE_upR137HaIH8eg&oe=69A7B505&_nc_sid=10d13b" alt="Post image" class="post-img">
-            <div class="post-content">
-                <div class="meta">
-                    <span>@thekatelynrhoades</span>
-                    <span>❤️ 94</span>
-                </div>
-                <p class="caption">If you’ve ever saved a post and thought, “I wish I had that template,” this is that moment.
-
-We drop designs like these (and a lot more) inside Club Enfluence so creating feels faster, lighter, and way less guessy.
-
-👇 Comment CLUB and I’ll send you the details....</p>
-                <div class="insight">
-                    <strong>💡 Pourquoi ça marche :</strong><br>
-                    Identifier et valider un comportement passif. L'accroche "If you've ever saved..." tape dans une habitude répandue. La promesse de rendre cela "less guessy" (moins incertain) transforme ce désir silencieux en acquisition ("Comment CLUB").
-                </div>
-                <a href="https://www.instagram.com/p/DVL2XvRjr0o/" target="_blank" class="btn">Voir le post Instagram</a>
-            </div>
-        </article>
-
-        <article class="post-card">
-            <img src="https://scontent-sjc3-1.cdninstagram.com/v/t51.82787-15/625975883_18091840565283906_3002403969609725667_n.jpg?stp=dst-jpg_e15_fr_p1080x1080_tt6&_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_cat=106&_nc_oc=Q6cZ2QH6Ixz9d6VPfaM-KaP1S5rmbQ9yaGYdAJc8c7tenJ3QLeS9tUcvhvlRMqqY53jcMwc&_nc_ohc=floyI1XHJvcQ7kNvwFLb51i&_nc_gid=zfSdab3HtTEZ0-MCk0-CuQ&edm=APs17CUBAAAA&ccb=7-5&oh=00_AfvJCRgqAf4ZWF5zoN7-r6l7pcd3_I8iGSjTCjBVImPiAw&oe=69A7B077&_nc_sid=10d13b" alt="Post image" class="post-img">
-            <div class="post-content">
-                <div class="meta">
-                    <span>@elasmarketingservices</span>
-                    <span>❤️ 1173</span>
-                </div>
-                <p class="caption">If your feed isn’t giving you new trends, I will 🎀✨
-
-Here are THE new February Social Media Trends happening right now! 
-
-The last one is my absolute favorite. 
-
-I cannot wait to finally start editing our own reality show @mainfeedmarketing 😂 it’s overdue.
-
-Now don’t wait for your man to text you,...</p>
-                <div class="insight">
-                    <strong>💡 Pourquoi ça marche :</strong><br>
-                    Le "Watch-bait" classique. L'incitation "The last one is my absolute favorite" force le spectateur à swiper jusqu'à la dernière slide. L'algorithme lit cette complétion ("Watch-through rate") comme un signal positif massif.
-                </div>
-                <a href="https://www.instagram.com/p/DUYlLKBDri6/" target="_blank" class="btn">Voir le post Instagram</a>
-            </div>
-        </article>
-
+            </article>
+        </div>
     </div>
 </div>
 
