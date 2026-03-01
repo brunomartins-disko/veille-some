@@ -4,87 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="referrer" content="no-referrer">
-    <title>Radar Social Media & Trends</title>
+    <title>Veille Social Media - Façon TTSO</title>
     <style>
         :root {
             --primary: #111827;
-            --secondary: #4F46E5;
-            --bg: #F3F4F6;
+            --secondary: #2563EB;
+            --bg: #F9FAFB;
             --card-bg: #FFFFFF;
-            --text: #374151;
+            --text: #1F2937;
+            --accent: #EF4444;
         }
         body {
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            font-family: 'Georgia', serif;
             background-color: var(--bg);
             color: var(--text);
             margin: 0;
             padding: 0;
             line-height: 1.6;
         }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
+        h1, h2, h3, .btn { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+        .container { max-width: 900px; margin: 0 auto; padding: 2rem; }
+        
         header {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: white;
-            padding: 3rem 2rem;
-            border-radius: 1rem;
-            margin-bottom: 3rem;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+            text-align: center;
         }
-        header h1 { margin: 0 0 0.5rem 0; font-size: 2.5rem; }
-        header p { margin: 0; font-size: 1.2rem; opacity: 0.9; }
+        header h1 { margin: 0; font-size: 3rem; font-weight: 900; letter-spacing: -1px; text-transform: uppercase; }
+        header p { margin: 0.5rem 0 0 0; font-size: 1.1rem; font-style: italic; color: #6B7280; }
+        
+        .news-section {
+            background: #EFF6FF;
+            padding: 2rem;
+            border-radius: 0.5rem;
+            margin-bottom: 4rem;
+            border-left: 6px solid var(--secondary);
+        }
+        .news-section h2 { margin-top: 0; font-size: 1.8rem; color: var(--secondary); font-weight: bold; }
+        .news-section ul { padding-left: 1.2rem; margin: 0; }
+        .news-section li { margin-bottom: 0.8rem; font-size: 1.1rem; }
         
         .trend-block {
-            margin-bottom: 5rem;
-            border-top: 2px dashed #E5E7EB;
+            margin-bottom: 4rem;
+            border-top: 1px solid #D1D5DB;
             padding-top: 3rem;
         }
-        .trend-block:first-of-type { border-top: none; padding-top: 0; }
-        
-        .analysis-section {
-            background: var(--card-bg);
-            padding: 2rem;
-            border-radius: 1rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            border-left: 5px solid var(--secondary);
-        }
-        .analysis-section h2 { color: var(--primary); margin-top: 0; font-size: 1.8rem; }
-        .analysis-section p { font-size: 1.05rem; color: #4B5563; }
+        .trend-title { font-size: 2.2rem; font-weight: 900; margin: 0 0 1rem 0; color: var(--primary); letter-spacing: -0.5px; }
+        .trend-analysis { font-size: 1.15rem; margin-bottom: 2rem; border-left: 4px solid var(--primary); padding-left: 1.5rem; font-style: italic;}
         
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
         }
         .post-card {
             background: var(--card-bg);
-            border-radius: 1rem;
+            border-radius: 0.5rem;
             overflow: hidden;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            transition: transform 0.2s;
             display: flex;
             flex-direction: column;
             border: 1px solid #E5E7EB;
         }
-        .post-card:hover { transform: translateY(-5px); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); }
         .post-img {
             width: 100%;
-            height: 350px;
+            height: 300px;
             object-fit: cover;
             background-color: #E5E7EB;
-            border-bottom: 1px solid #E5E7EB;
         }
-        .post-content { padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column;}
+        .post-content { padding: 1.2rem; flex-grow: 1; display: flex; flex-direction: column;}
         .meta {
             display: flex;
             justify-content: space-between;
-            font-size: 0.875rem;
+            font-size: 0.85rem;
             color: #6B7280;
-            margin-bottom: 1rem;
+            margin-bottom: 0.8rem;
+            text-transform: uppercase;
             font-weight: bold;
         }
         .caption {
@@ -95,15 +91,17 @@
             -webkit-line-clamp: 3;
             -webkit-box-orient: vertical;
             overflow: hidden;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
         }
         .insight {
-            background: #EFF6FF;
+            background: #FEF2F2;
             padding: 1rem;
-            border-radius: 0.5rem;
+            border-radius: 0.3rem;
             font-size: 0.9rem;
-            color: #1E3A8A;
+            color: #991B1B;
             margin-bottom: 1rem;
             flex-grow: 1;
+            border-left: 3px solid var(--accent);
         }
         .btn {
             display: block;
@@ -111,9 +109,10 @@
             background: var(--primary);
             color: white;
             text-decoration: none;
-            padding: 0.75rem;
-            border-radius: 0.5rem;
+            padding: 0.6rem;
+            border-radius: 0.3rem;
             font-weight: bold;
+            font-size: 0.9rem;
             transition: background 0.2s;
         }
         .btn:hover { background: var(--secondary); }
@@ -123,15 +122,24 @@
 
 <div class="container">
     <header>
-        <h1>⚡ Curated Social Trends</h1>
-        <p>Analyse stratégique & curation des signaux faibles (Février-Mars 2026)</p>
+        <h1>La Veille Social Media</h1>
+        <p>L'actu et les trends qu'il ne fallait pas rater cette semaine.</p>
     </header>
 
-    <!-- TENDANCE 1 -->
+    <div class="news-section">
+        <h2>Si tu as passé la semaine dans une grotte</h2>
+        <ul>
+            <li><strong>Bye bye les Reels ?</strong> Grosse panique chez les créateurs (dont @holler.academy) qui observent une chute du reach vidéo. Le consensus : retour en force du carrousel pour fidéliser.</li>
+            <li><strong>L'ère du "Comment-to-win" :</strong> Plus personne ne donne de lien en bio. La méta absolue de mars 2026, c'est l'automatisation ManyChat aggressive (ex: "Commente DAILY/YEAR/CLUB").</li>
+            <li><strong>Esthétique "Fake Green Screen" :</strong> C'est la trend visuelle du moment repérée chez @elasmarketingservices. On colle sa tête sur un fond Google Maps ou Météo iPhone pour raconter sa vie.</li>
+            <li><strong>Mars Attack :</strong> Tout le monde sort sa "Cheat Sheet" ou son calendrier de mars. Si tu n'as pas posté tes idées de contenu pour le mois prochain, tu es déjà en retard.</li>
+        </ul>
+    </div>
+
     <div class="trend-block">
-        <div class="analysis-section">
-            <h2>🔥 Tendance 1 : Le "Macro-Content" et la revanche du Carousel</h2>
-            <p>On assiste à un pivot majeur loin du snacking content ultra-court. L'analyse des textes sur images révèle une saturation des Reels courts au profit de ce que les créateurs appellent le "Macro-Content". La stratégie consiste à capturer la rétention non plus par le rythme, mais par la densité de valeur. Les carrousels ne sont plus de simples images, mais de véritables cours magistraux (frameworks, storytelling guidé, comparaison de datas). L'objectif explicite affiché sur les slides est de "nurture" (nourrir) l'audience pour construire la confiance, plutôt que de viser la viralité vide.</p>
+        <h2 class="trend-title">Le retour du Roi (Carrousel)</h2>
+        <div class="trend-analysis">
+            <p>On l'avait un peu enterré au profit du format 9:16 qui bouge, mais <strong>le carrousel reprend le pouvoir</strong>. Pourquoi ? Parce que l'algo valorise le temps passé et la rétention active (le swipe). Les "Text-on-images" sont ultra-denses cette semaine : on ne fait plus de l'inspi, on fait du <strong>cours magistral sur 10 slides</strong>. C'est ce qu'on appelle le "Macro-Content".</p>
         </div>
 
         <div class="grid">
@@ -144,36 +152,57 @@
                     </div>
                     <p class="caption">REELS ARE DEAD 💀 Carousels are what’s working on Instagram right now! 🏆...</p>
                     <div class="insight">
-                        <strong>💡 Analyse du Text-on-Image :</strong><br>
-                        Le visuel affirme explicitement "Carousels are the most engaged with content", données à l'appui (1.92% vs 1.45% pour les Reels). Il déstructure la méthode : Hook -> Problème -> Solution -> Preuve -> Action. C'est une approche analytique et non divertissante.
+                        <strong>💡 L'œil de l'insider :</strong><br>
+                        Le titre sur l'image est brutal : "REELS ARE DEAD". C'est du clickbait assumé pour vendre la formation sur le "Macro-Content". Efficace.
                     </div>
-                    <a href="https://www.instagram.com/p/DVRNVWtCrtD/" target="_blank" class="btn">Voir le post Instagram</a>
+                    <a href="https://www.instagram.com/p/DVRNVWtCrtD/" target="_blank" class="btn">Voir le post</a>
                 </div>
             </article>
 
             <article class="post-card">
-                <img src="https://wsrv.nl/?url=https%3A%2F%2Fscontent-ord5-3.cdninstagram.com%2Fv%2Ft51.82787-15%2F640945032_18391772881195531_6687280682591187129_n.jpg%3Fstp%3Ddst-jpg_e15_tt6%26_nc_ht%3Dscontent-ord5-3.cdninstagram.com%26_nc_cat%3D107%26_nc_oc%3DQ6cZ2QHdeWTVK_I43FYjpWwo-LRnkAU3wso3gCuk5NL077CxFMlitjsuiv69zzDmxooXcoE%26_nc_ohc%3DfNLhDWTd5moQ7kNvwG2fVCK%26_nc_gid%3Ds_BNxvGwVN9f4Un9p6seiw%26edm%3DAPs17CUBAAAA%26ccb%3D7-5%26oh%3D00_AftwxxJS-UjTigB36BtFYaSqbeQGRcYoq9snSQ5fnijlMw%26oe%3D69A7BCBF%26_nc_sid%3D10d13b" alt="Post image" class="post-img">
+                <img src="https://wsrv.nl/?url=https%3A%2F%2Fscontent-lga3-1.cdninstagram.com%2Fv%2Ft51.82787-15%2F641044355_18387351301153388_5093094776509294501_n.jpg%3Fstp%3Ddst-jpg_e15_tt6%26_nc_ht%3Dscontent-lga3-1.cdninstagram.com%26_nc_cat%3D108%26_nc_oc%3DQ6cZ2QHAlhT1p4FVWf4uEcO2j83LYW0_vcJ9Zu2LqC0LSrOkozswS5I3Wy8WZoPKpHT0fwY%26_nc_ohc%3DVqCTKQGjv9gQ7kNvwGphSPa%26_nc_gid%3DD5N02dX3ptE4fR2oCILDeg%26edm%3DAPs17CUBAAAA%26ccb%3D7-5%26oh%3D00_AfudIQq5jJIjiancxNGmrp4yMkRodjLqOVMBG8B24-nmWA%26oe%3D69A79DF0%26_nc_sid%3D10d13b" alt="Post image" class="post-img">
+                <div class="post-content">
+                    <div class="meta">
+                        <span>@_socialsam_</span>
+                        <span>❤️ 349</span>
+                    </div>
+                    <p class="caption">📝 March 2026 Instagram cheat sheet 💥
+
+This cheat sheet has EVERYTHING you need to stay ahead of the game - formats, posting schedules, too...</p>
+                    <div class="insight">
+                        <strong>💡 L'œil de l'insider :</strong><br>
+                        L'exemple parfait du contenu "sauvegardable". Une slide par feature (Reels, Stories, Highlights) avec des checklists ultra-denses. De la valeur pure.
+                    </div>
+                    <a href="https://www.instagram.com/p/DVL8UBvDmBb/" target="_blank" class="btn">Voir le post</a>
+                </div>
+            </article>
+
+            <article class="post-card">
+                <img src="https://wsrv.nl/?url=https%3A%2F%2Fscontent-mia3-2.cdninstagram.com%2Fv%2Ft51.82787-15%2F627276698_18391484305195531_3806802255740003432_n.jpg%3Fstp%3Ddst-jpg_e15_fr_p1080x1080_tt6%26_nc_ht%3Dscontent-mia3-2.cdninstagram.com%26_nc_cat%3D107%26_nc_oc%3DQ6cZ2QGus-C9ZYIktRbmL-vpz4SvYhctf2Xw5VmTwkGy2I0d-K6bxuAlrQbCd3GA1X6A7e0%26_nc_ohc%3DrVyCf7laOe0Q7kNvwGmWb-a%26_nc_gid%3DVdVCxG4284LkuqdOmwYhuA%26edm%3DAPs17CUBAAAA%26ccb%3D7-5%26oh%3D00_AfviybXVt4vlUSiqxyk4yxsVXBkobavrims9n2dNLLeXVQ%26oe%3D69A7A302%26_nc_sid%3D10d13b" alt="Post image" class="post-img">
                 <div class="post-content">
                     <div class="meta">
                         <span>@holler.academy</span>
-                        <span>❤️ 133</span>
+                        <span>❤️ 589</span>
                     </div>
-                    <p class="caption">How to create incredible macro-content (longer form content like carousels and talking videos) ❤️...</p>
+                    <p class="caption">CAROUSEL TRENDS FOR THE WEEK - March 2026 😍
+
+✨PART ONE✨
+
+I’ve seen some shocking information about carousels that I’m going to share...</p>
                     <div class="insight">
-                        <strong>💡 Analyse du Text-on-Image :</strong><br>
-                        Le texte introduit le concept de "Macro-Content" défini comme du contenu "In-Depth" pour "construire des relations". Il cite même des frameworks narratifs (Donald Miller) directement sur les slides. Le but affiché : transformer les followers en superfans.
+                        <strong>💡 L'œil de l'insider :</strong><br>
+                        Le méta-post : un carrousel qui parle des tendances carrousels. Notez l'esthétique "scrapbook" qui remplace le design corporate lisse.
                     </div>
-                    <a href="https://www.instagram.com/p/DVO2g-VCseX/" target="_blank" class="btn">Voir le post Instagram</a>
+                    <a href="https://www.instagram.com/p/DVIzt29CncH/" target="_blank" class="btn">Voir le post</a>
                 </div>
             </article>
         </div>
     </div>
 
-    <!-- TENDANCE 2 -->
     <div class="trend-block">
-        <div class="analysis-section">
-            <h2>🔥 Tendance 2 : L'Ingénierie Psychologique des Hooks</h2>
-            <p>La simple "phrase d'accroche" ne suffit plus. On observe une segmentation très fine et quasi-scientifique des "Hooks" (accroches). Les créateurs ne se contentent plus de titres chocs, ils catégorisent leurs approches : émotionnelle, controversée, cliffhanger ou éducative. Les textes sur les images montrent une volonté de manipuler (au sens technique) la curiosité et l'empathie via des structures de phrases à trous ou des aveux de vulnérabilité calculés ("I wasn't supposed to tell this..."). C'est l'industrialisation du copywriting émotionnel.</p>
+        <h2 class="trend-title">Mot magique : "Commente [XYZ]"</h2>
+        <div class="trend-analysis">
+            <p>La caption est devenue une simple zone de transit. La vraie action se passe dans l'image. <strong>Le growth hack de la semaine ?</strong> Mettre le Call-to-Action (CTA) en gros, en gras, directement sur le visuel, avec un mot-clé unique ("DAILY", "CLUB", "TRENDING"). C'est la seule façon de battre l'algo en générant massivement des commentaires tout en automatisant la distribution de lead magnets via ManyChat.</p>
         </div>
 
         <div class="grid">
@@ -184,25 +213,37 @@
                         <span>@socialsyncflow</span>
                         <span>❤️ 2952</span>
                     </div>
-                    <p class="caption">Comment “DAILY” and get the exact strategies behind 26M views, 30K followers & thousands of leads...</p>
+                    <p class="caption">Comment “DAILY” and get the exact strategies behind 26M views, 30K followers & thousands of leads in 90 days - delivered in 90-second les...</p>
                     <div class="insight">
-                        <strong>💡 Analyse du Text-on-Image :</strong><br>
-                        Ce post est une mine d'or sémantique. Il catégorise les hooks : "Intrigue Hooks" (ex: "What no one saw behind that photo"), "Controversial Hooks" ("I know I'll get hate..."), et "Emotional Hooks". Il prouve que la performance repose sur des templates psychologiques précis.
+                        <strong>💡 L'œil de l'insider :</strong><br>
+                        Presque 3000 likes. Le visuel contient déjà toute la valeur (les types de hooks) mais le "Comment DAILY" en bas est impossible à rater.
                     </div>
-                    <a href="https://www.instagram.com/p/DVG5GmUDJLG/" target="_blank" class="btn">Voir le post Instagram</a>
+                    <a href="https://www.instagram.com/p/DVG5GmUDJLG/" target="_blank" class="btn">Voir le post</a>
                 </div>
             </article>
-        </div>
-    </div>
 
-    <!-- TENDANCE 3 -->
-    <div class="trend-block">
-        <div class="analysis-section">
-            <h2>🔥 Tendance 3 : L'Esthétique "Native UI" & Trompe-l'œil</h2>
-            <p>Une tendance visuelle forte émerge : l'utilisation d'éléments d'interface utilisateur (UI) familiers pour structurer le contenu. Au lieu d'un design graphique classique, on utilise les codes visuels de nos téléphones : calendriers iOS, notifications AirDrop, widgets météo ou interfaces d'appareils photo. Cette technique réduit la friction cognitive (le cerveau reconnaît immédiatement le format) et donne un aspect "natif" et authentique, moins publicitaire. C'est le design qui se fond dans l'usage quotidien de l'outil.</p>
-        </div>
+            <article class="post-card">
+                <img src="https://wsrv.nl/?url=https%3A%2F%2Fscontent-iad3-1.cdninstagram.com%2Fv%2Ft51.82787-15%2F638896054_18387467935153388_8730106313108031434_n.jpg%3Fstp%3Ddst-jpg_e15_tt6%26_nc_ht%3Dscontent-iad3-1.cdninstagram.com%26_nc_cat%3D108%26_nc_oc%3DQ6cZ2QHtCAs7jWCo5iSfLkeDNbZlBQ-BHTx2-wXrAzK52ax599brjuAdindaMuPmx1OY7Zk%26_nc_ohc%3Deq3kdamciekQ7kNvwEBlKMT%26_nc_gid%3DOfKyCLIDRzw_vwVkqP6vAQ%26edm%3DAPs17CUBAAAA%26ccb%3D7-5%26oh%3D00_AfuJqGoiKg0e_wp19urUZFm6blo08VRD9fjfjCfgar2Yuw%26oe%3D69A7B922%26_nc_sid%3D10d13b" alt="Post image" class="post-img">
+                <div class="post-content">
+                    <div class="meta">
+                        <span>@_socialsam_</span>
+                        <span>❤️ 277</span>
+                    </div>
+                    <p class="caption">💡[5-minute Reels trending right now]✈️
 
-        <div class="grid">
+They’re:
+
+✔️easy to create
+✔️they stop the scroll
+✔️easy to customize to your biz ↗️...</p>
+                    <div class="insight">
+                        <strong>💡 L'œil de l'insider :</strong><br>
+                        Même mécanique : "Comment TRENDING". Sam vend l'accès à sa membership en utilisant un contenu d'appel gratuit. Simple, basique.
+                    </div>
+                    <a href="https://www.instagram.com/p/DVOkgQgDtFM/" target="_blank" class="btn">Voir le post</a>
+                </div>
+            </article>
+
             <article class="post-card">
                 <img src="https://wsrv.nl/?url=https%3A%2F%2Fscontent-lga3-1.cdninstagram.com%2Fv%2Ft51.82787-15%2F630175264_18561310843053386_4050647979961216477_n.jpg%3Fstp%3Ddst-jpg_e15_fr_p1080x1080_tt6%26_nc_ht%3Dscontent-lga3-1.cdninstagram.com%26_nc_cat%3D102%26_nc_oc%3DQ6cZ2QGdJlo7r950vGxJrTwQ-tFHfRMSTdZFX8qqnB20E2Zilz2hQEe9BZrxhaCK5Ysl5sI%26_nc_ohc%3DCpARBtbw2F8Q7kNvwHOmh-R%26_nc_gid%3DEt8WF5E-olBWYB7CWngqXA%26edm%3DAPs17CUBAAAA%26ccb%3D7-5%26oh%3D00_Afsy4uP6Hfi2vVALl7ETaKgZqiT-7atE_upR137HaIH8eg%26oe%3D69A7B505%26_nc_sid%3D10d13b" alt="Post image" class="post-img">
                 <div class="post-content">
@@ -210,34 +251,83 @@
                         <span>@thekatelynrhoades</span>
                         <span>❤️ 94</span>
                     </div>
-                    <p class="caption">If you’ve ever saved a post and thought, “I wish I had that template,” this is that moment...</p>
-                    <div class="insight">
-                        <strong>💡 Analyse du Text-on-Image :</strong><br>
-                        Les textes décrivent précisément ces formats : "The Monthly calendar trend" (utiliser un visuel de calendrier pour récapituler le mois), "The AirDrop photo dump trend" (simuler une notif AirDrop), et "The what's on the forecast trend" (détourner le widget météo).
-                    </div>
-                    <a href="https://www.instagram.com/p/DVL2XvRjr0o/" target="_blank" class="btn">Voir le post Instagram</a>
-                </div>
-            </article>
+                    <p class="caption">If you’ve ever saved a post and thought, “I wish I had that template,” this is that moment.
 
-             <article class="post-card">
-                <img src="https://wsrv.nl/?url=https%3A%2F%2Fscontent-lga3-1.cdninstagram.com%2Fv%2Ft51.82787-15%2F641044355_18387351301153388_5093094776509294501_n.jpg%3Fstp%3Ddst-jpg_e15_tt6%26_nc_ht%3Dscontent-lga3-1.cdninstagram.com%26_nc_cat%3D108%26_nc_oc%3DQ6cZ2QHAlhT1p4FVWf4uEcO2j83LYW0_vcJ9Zu2LqC0LSrOkozswS5I3Wy8WZoPKpHT0fwY%26_nc_ohc%3DVqCTKQGjv9gQ7kNvwGphSPa%26_nc_gid%3DD5N02dX3ptE4fR2oCILDeg%26edm%3DAPs17CUBAAAA%26ccb%3D7-5%26oh%3D00_AfudIQq5jJIjiancxNGmrp4yMkRodjLqOVMBG8B24-nmWA%26oe%3D69A79DF0%26_nc_sid%3D10d13b" alt="Post image" class="post-img">
-                <div class="post-content">
-                    <div class="meta">
-                        <span>@_socialsam_</span>
-                        <span>❤️ 349</span>
-                    </div>
-                    <p class="caption">📝 March 2026 Instagram cheat sheet 💥...</p>
+We drop designs like these (and a lot more)...</p>
                     <div class="insight">
-                        <strong>💡 Analyse du Text-on-Image :</strong><br>
-                        Bien que ce soit une "Cheat Sheet", le format visuel utilise des simulacres de listes de contrôle et de blocs-notes numériques ("BEFORE POSTING checklist"). Le texte est présenté comme une interface de productivité plutôt que comme un design artistique.
+                        <strong>💡 L'œil de l'insider :</strong><br>
+                        Le CTA "Comment CLUB" est répété sur chaque slide du carrousel. On ne laisse aucune chance à l'utilisateur de passer à côté.
                     </div>
-                    <a href="https://www.instagram.com/p/DVL8UBvDmBb/" target="_blank" class="btn">Voir le post Instagram</a>
+                    <a href="https://www.instagram.com/p/DVL2XvRjr0o/" target="_blank" class="btn">Voir le post</a>
                 </div>
             </article>
         </div>
     </div>
 
-</div>
+    <div class="trend-block">
+        <h2 class="trend-title">Le chaos organisé</h2>
+        <div class="trend-analysis">
+            <p>Fini le minimalisme beige. Les tendances visuelles qui montent sont un peu plus "messy" et créatives. On note particulièrement le <strong>"Fake Green Screen"</strong> (superposer un détourage sur une capture d'écran iPhone météo ou maps) et le retour des ambiances <strong>Polaroid</strong>. Le but ? Avoir l'air authentique en étant extrêmement produit.</p>
+        </div>
+
+        <div class="grid">
+            <article class="post-card">
+                <img src="https://wsrv.nl/?url=https%3A%2F%2Fscontent-hou1-1.cdninstagram.com%2Fv%2Ft51.82787-15%2F623373052_18091048400283906_417769845711911899_n.jpg%3Fstp%3Ddst-jpg_e15_fr_p1080x1080_tt6%26_nc_ht%3Dscontent-hou1-1.cdninstagram.com%26_nc_cat%3D106%26_nc_oc%3DQ6cZ2QF0q40dw83ct1ZsVZP6JnGJSzYmxRHfccOsN10dQfjVguBqi5vNNc8bjkr2u42zzQQ%26_nc_ohc%3D6EoDYGZq0uoQ7kNvwEEdDIY%26_nc_gid%3DjJeFqlCR9TSVle7-Ir19PA%26edm%3DAPs17CUBAAAA%26ccb%3D7-5%26oh%3D00_AfvVYfayTcdzh7f3dDqJDYdFpy5r3IGzCdye2ok-Gyt_Nw%26oe%3D69A7ACDF%26_nc_sid%3D10d13b" alt="Post image" class="post-img">
+                <div class="post-content">
+                    <div class="meta">
+                        <span>@elasmarketingservices</span>
+                        <span>❤️ 5234</span>
+                    </div>
+                    <p class="caption">🚨THIS girl dinner is pitch perfect! Here are THE February Social Media Trends happening right now!
+
+I bet you didn’t see that fake gree...</p>
+                    <div class="insight">
+                        <strong>💡 L'œil de l'insider :</strong><br>
+                        5000+ likes sur ce post qui liste les trends (dont le "fake green screen"). C'est une veille dans la veille. Très meta.
+                    </div>
+                    <a href="https://www.instagram.com/p/DUEEyJsj3Du/" target="_blank" class="btn">Voir le post</a>
+                </div>
+            </article>
+
+            <article class="post-card">
+                <img src="https://wsrv.nl/?url=https%3A%2F%2Fscontent-lax3-1.cdninstagram.com%2Fv%2Ft51.82787-15%2F641356840_17978461274985808_5008701715957087578_n.jpg%3Fstp%3Ddst-jpg_e15_tt6%26_nc_ht%3Dscontent-lax3-1.cdninstagram.com%26_nc_cat%3D104%26_nc_oc%3DQ6cZ2QFD8ASw2RUhUL-SDzmeVNt6viznbYZMlnGLUY5Rncc78l60IysXSa7NBtH7u901j_k%26_nc_ohc%3DNXjgZlacE0QQ7kNvwEp8iJJ%26_nc_gid%3DXKGt9ozDqcsGMz_rmyzBrQ%26edm%3DAPs17CUBAAAA%26ccb%3D7-5%26oh%3D00_Aft-QldHHB-SbFDqlqugEwy0uVRQKMhv-j8_0_9Daqrw2w%26oe%3D69A79726%26_nc_sid%3D10d13b" alt="Post image" class="post-img">
+                <div class="post-content">
+                    <div class="meta">
+                        <span>@social.unicorns</span>
+                        <span>❤️ 3278</span>
+                    </div>
+                    <p class="caption">MARCH 2026 SOCIAL MEDIA TRENDS - PART 1 🌸
+
+Trend 1: My nervous system @katstickler 
+Trend 2: POV: I fell but I saved my matcha @jess...</p>
+                    <div class="insight">
+                        <strong>💡 L'œil de l'insider :</strong><br>
+                        Le format liste "Trend 1, Trend 2..." fonctionne toujours aussi fort. Ici, focus sur les audios et les concepts ("My nervous system", "Soft brag").
+                    </div>
+                    <a href="https://www.instagram.com/p/DVL9JEdDPhj/" target="_blank" class="btn">Voir le post</a>
+                </div>
+            </article>
+
+             <article class="post-card">
+                <img src="https://wsrv.nl/?url=https%3A%2F%2Fscontent-bos5-1.cdninstagram.com%2Fv%2Ft51.71878-15%2F634208868_925707573165538_4716767659997257045_n.jpg%3Fstp%3Ddst-jpg_e15_tt6%26_nc_ht%3Dscontent-bos5-1.cdninstagram.com%26_nc_cat%3D110%26_nc_oc%3DQ6cZ2QH8VbMcso6bGWDcdShyPPHt8duwzUB-djYh0yzH1qDi2Xv7WNeeIDx_14yofD05tAaKtj7Ix071RiXZS2wmQGp1%26_nc_ohc%3DyTmN-auzJs0Q7kNvwEWhaCf%26_nc_gid%3D_8trlAQ2gSVk8g-QKN2BDw%26edm%3DAPs17CUBAAAA%26ccb%3D7-5%26oh%3D00_Afug_OjO-faZjAv1suYbP-rgNNZQnLImQQEDcyToqMJ-2w%26oe%3D69A79782%26_nc_sid%3D10d13b" alt="Post image" class="post-img">
+                <div class="post-content">
+                    <div class="meta">
+                        <span>@holler.academy</span>
+                        <span>❤️ 78</span>
+                    </div>
+                    <p class="caption">🚨TRENDING REEL ALERT 🚨 Canva Template deets below👇
+
+I made this trending Polaroid Moodboard reel into a super easy to use Canva Temp...</p>
+                    <div class="insight">
+                        <strong>💡 L'œil de l'insider :</strong><br>
+                        Le retour du Polaroid pour le côté nostalgique/moodboard. C'est simple, visuel, et ça casse la grille trop parfaite.
+                    </div>
+                    <a href="https://www.instagram.com/p/DVHHY6UCnK7/" target="_blank" class="btn">Voir le post</a>
+                </div>
+            </article>
+        </div>
+    </div>
+    </div>
 
 </body>
 </html>
